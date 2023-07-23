@@ -30,7 +30,6 @@ type photoProps = {
 }
 
 const PhotoCell = (props: photoProps) => {
-  console.log("photoCell render")
   let isLiked = false
   let likedPhotos = useSelector((state) => state["likes"]["likedId"])
   let elementId = props["item"]["id"]

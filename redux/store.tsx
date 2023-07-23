@@ -16,8 +16,6 @@ const rootReducers = combineReducers({
   likes: likedSlice
 })
 
- 
-
 const persistedReducer = persistReducer(persistConfig, rootReducers)
 
 export const store = configureStore({

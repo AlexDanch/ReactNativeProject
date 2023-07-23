@@ -1,13 +1,10 @@
 import { View, Text, SafeAreaView } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import {useSelector, useDispatch} from "react-redux"
 import React, {useState, useEffect} from 'react'
+import { FlashList } from "@shopify/flash-list"
 import PhotoCell from '../components/PhotoCell'
-import { FlashList } from "@shopify/flash-list";
-import Menu from "../components/Tabs"
 import styled from 'styled-components/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { RootStackParams } from '../App'
+import Menu from "../components/Tabs"
 
 const Container = styled.SafeAreaView`
    background-color: #b7410e;
@@ -22,13 +19,9 @@ const FlashListFavoriteContainer = styled.View`
 `
 
 const FavoriteScreen = (props) => {
-  console.log("FavoriteScreen Render")
-  const navigation = useNavigation();
-  const photo = useSelector((state)=> state["favoriteElement"].favoriteElement)
+  let photo = useSelector((state)=> state["favoriteElement"].favoriteElement)
   let photos = []
-  photo.map((item) => { 
-    photos.push(item)
-  })
+  photo.map((item) => { photos.push(item) })
   
   return (
     <Container>
@@ -38,7 +31,7 @@ const FavoriteScreen = (props) => {
         renderItem = {({item}) => {
           return <PhotoCell item={item}   />;
         }}
-        estimatedItemSize={350}
+        estimatedItemSize={100}
         numColumns= {2}
        />
      </FlashListFavoriteContainer>

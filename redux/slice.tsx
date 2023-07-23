@@ -27,7 +27,6 @@ export const contentManagerSlice = createSlice({
               state.favoriteElement.forEach(element => {
                  count++
                  if (element.id === action.payload.id) {
-                    console.log(count)
                    state.favoriteElement.splice(count, 1)
                  }
               })

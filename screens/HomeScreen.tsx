@@ -34,10 +34,7 @@ const FlashListContainer = styled.View`
 `
 
 const HomeScreen = (props) => {
-  console.log("homeScreenRerender")
-  const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
   const [photos, setPhotos] = useState([])
-  const [searchQuery, setSearchQuery] = useState("")
   const [photoFiltr, setFiltrPhotos] = useState([])
 
   const url = "https://jsonplaceholder.typicode.com/photos?albumId=1"
@@ -58,7 +55,7 @@ const HomeScreen = (props) => {
     return contains
   }
  function setHSearchQuery(query) {
-   if (query == "") {
+   if (query === "") {
     setPhotos(prevPhotos => photoFiltr)
    }
     filerDataSearch(query)
@@ -71,20 +68,20 @@ const HomeScreen = (props) => {
 
   let filteredData = filter(photosCloneFiter, (photo) => {
    return contains(photo, formatedQuery)
-  }) 
+  })  
   setPhotos(preveousData => filteredData)
  }
   
   return (
   <Container>
-     <SearchBar onSearchQuery={setHSearchQuery}/>
+    <SearchBar onSearchQuery={setHSearchQuery}/>
     <FlashListContainer>
       <FlashList 
         data = {photos}
         renderItem = {({item}) => {
           return <PhotoCell item={item}  />;
         }}
-        estimatedItemSize={350}
+        estimatedItemSize={100}
         numColumns= {2}
       />
      </FlashListContainer>

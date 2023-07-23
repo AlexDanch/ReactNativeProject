@@ -18,7 +18,7 @@ const SearchView = styled.View`
 const StyledTextInput = styled.TextInput`
   font-weight: bold;
   font-size: 20px; 
-  width: 100%;
+  width: 90%;
 `
 
  const SearchBar = (props) => {
