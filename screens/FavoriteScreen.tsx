@@ -1,10 +1,9 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import {useSelector, useDispatch} from "react-redux"
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { FlashList } from "@shopify/flash-list"
 import PhotoCell from '../components/PhotoCell'
 import styled from 'styled-components/native'
-import Menu from "../components/Tabs"
 
 const Container = styled.SafeAreaView`
    background-color: #b7410e;

@@ -8,10 +8,6 @@ import filter from "lodash.filter"
 import styled from 'styled-components/native'
 import React, {useLayoutEffect, useState, useEffect} from 'react'
 import PhotoCell from '../components/PhotoCell'
-import Menu from "../components/Tabs"
-
-import { RootStackParams } from '../App';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const Container = styled.SafeAreaView`
     background: #F7F7FF;

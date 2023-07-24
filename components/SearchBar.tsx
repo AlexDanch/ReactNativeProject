@@ -1,7 +1,7 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome"
-import { Text, View, TextInput } from 'react-native'
-import styled from 'styled-components/native'
 import React, { useState } from 'react'
+import styled from 'styled-components/native'
+import { Text, View, TextInput } from 'react-native'
+import FontAwesome from "@expo/vector-icons/FontAwesome"
 
 const SearchView = styled.View`
      background: #d3d3d3;
